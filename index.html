@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrivago - AI-boekcreatie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Scrivago</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacybeleid</a>
+            <a href="terms.html">Algemene Voorwaarden</a>
+            <a href="mailto:info@scrivago.com">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Van idee naar boek, in één klik</h2>
+            <p>
+                Met Scrivago kun je jouw boekidee eenvoudig omtoveren in een <strong>volwaardig, uitgeefbaar boek</strong>. 
+                Onze geavanceerde AI-technologie schrijft, structureert en redigeert jouw verhaal, zodat jij je kunt focussen op de creativiteit.
+            </p>
+        </section>
+
+        <section>
+            <h2>Hoe het werkt</h2>
+            <ol>
+                <li>Vul je boekidee in</li>
+                <li>Laat onze AI het verhaal genereren</li>
+                <li>Ontvang een volledig manuscript, klaar voor publicatie</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Prijzen</h2>
+            <p>Creditsysteem: Koop credits en gebruik ze wanneer je wilt.</p>
+            <ul>
+                <li>100 credits - €5</li>
+                <li>500 credits - €20</li>
+                <li>1000 credits - €35</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p id="email"></p>
+            <p id="address"></p>
+            <p>Email: <a href="mailto:info@scrivago.com">info@scrivago.com</a></p>
+            <p>Adres: Middenlaan 64, 3971 Heppen, België</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Scrivago. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+
+<p id="address"></p>
+<script>
+  const user = "info";
+  const domain = "scrivago.com";
+  const email = `${user}@${domain}`;
+  
+  const link = document.createElement("a");
+  link.href = `mailto:${email}`;
+  link.textContent = email;
+
+  document.getElementById("email").appendChild(link);
+
+  document.getElementById("address").textContent = "Adres: Middenlaan 64, 3971 Heppen, België";
+</script>
+
+</html>
