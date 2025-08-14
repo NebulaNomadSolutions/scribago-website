@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacybeleid - Scrivago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Scrivago</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="terms.html">Algemene Voorwaarden</a>
+        <a id="email-link" href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Privacybeleid</h2>
+    <p>Wij respecteren jouw privacy en verzamelen enkel gegevens die nodig zijn om onze diensten te leveren.</p>
+    <h3>Welke gegevens verzamelen wij?</h3>
+    <ul>
+        <li>Naam en contactgegevens</li>
+        <li>Betaalgegevens</li>
+        <li>Ingevoerde boekideeën en teksten</li>
+    </ul>
+    <h3>Hoe gebruiken wij jouw gegevens?</h3>
+    <p>Alle gegevens worden uitsluitend gebruikt voor het uitvoeren van onze dienst en worden niet verkocht aan derden.</p>
+    <h3>Contact</h3>
+    <p id="email"></p>
+</main>
+
+<footer>
+    <p>&copy; 2025 Scrivago. Alle rechten voorbehouden.</p>
+</footer>
+
+<script>
+    const user = "info";
+    const domain = "scrivago.com";
+    const email = `${user}@${domain}`;
+    const emailLink = document.createElement("a");
+    emailLink.href = `mailto:${email}`;
+    emailLink.textContent = email;
+    document.getElementById("email").appendChild(emailLink);
+    document.getElementById("email-link").href = `mailto:${email}`;
+</script>
+</body>
+</html>

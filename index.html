@@ -7,71 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Scrivago</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacybeleid</a>
-            <a href="terms.html">Algemene Voorwaarden</a>
-            <a href="mailto:info@scrivago.com">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Scrivago</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="terms.html">Algemene Voorwaarden</a>
+        <a id="email-link" href="#">Contact</a>
+    </nav>
+</header>
 
-    <main>
-        <section>
-            <h2>Van idee naar boek, in één klik</h2>
-            <p>
-                Met Scrivago kun je jouw boekidee eenvoudig omtoveren in een <strong>volwaardig, uitgeefbaar boek</strong>. 
-                Onze geavanceerde AI-technologie schrijft, structureert en redigeert jouw verhaal, zodat jij je kunt focussen op de creativiteit.
-            </p>
-        </section>
+<main>
+    <section>
+        <h2>Van idee naar boek, in één klik</h2>
+        <p>
+            Met Scrivago kun je jouw boekidee eenvoudig omtoveren in een 
+            <strong>volwaardig, uitgeefbaar boek</strong>. 
+            Onze geavanceerde AI-technologie schrijft, structureert en redigeert jouw verhaal, zodat jij je kunt focussen op de creativiteit.
+        </p>
+    </section>
 
-        <section>
-            <h2>Hoe het werkt</h2>
-            <ol>
-                <li>Vul je boekidee in</li>
-                <li>Laat onze AI het verhaal genereren</li>
-                <li>Ontvang een volledig manuscript, klaar voor publicatie</li>
-            </ol>
-        </section>
+    <section>
+        <h2>Hoe het werkt</h2>
+        <ol>
+            <li>Vul je boekidee in</li>
+            <li>Laat onze AI het verhaal genereren</li>
+            <li>Ontvang een volledig manuscript, klaar voor publicatie</li>
+        </ol>
+    </section>
 
-        <section>
-            <h2>Prijzen</h2>
-            <p>Creditsysteem: Koop credits en gebruik ze wanneer je wilt.</p>
-            <ul>
-                <li>100 credits - €5</li>
-                <li>500 credits - €20</li>
-                <li>1000 credits - €35</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Prijzen</h2>
+        <p>Creditsysteem: Koop credits en gebruik ze wanneer je wilt.</p>
+        <ul>
+            <li>100 credits - €5</li>
+            <li>500 credits - €20</li>
+            <li>1000 credits - €35</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p id="email"></p>
-            <p id="address"></p>
-            <p>Email: <a href="mailto:info@scrivago.com">info@scrivago.com</a></p>
-            <p>Adres: Middenlaan 64, 3971 Heppen, België</p>
-        </section>
-    </main>
+    <!-- <section>
+        <h2>Blijf op de hoogte</h2>
+        <p>Laat je e-mailadres achter en we sturen je een update zodra Scrivago live gaat.</p>
+        <form action="https://formspree.io/f/mjkbjkwq" method="POST">
+            <input type="email" name="email" placeholder="Jouw e-mailadres" required>
+            <button type="submit">Inschrijven</button>
+        </form>
+    </section> -->
 
-    <footer>
-        <p>&copy; 2025 Scrivago. Alle rechten voorbehouden.</p>
-    </footer>
-</body>
+    <section>
+        <h2>Contact</h2>
+        <p id="email"></p>
+        <p id="address"></p>
+    </section>
+</main>
 
-<p id="address"></p>
+<footer>
+    <p>&copy; 2025 Scrivago. Alle rechten voorbehouden.</p>
+</footer>
+
 <script>
-  const user = "info";
-  const domain = "scrivago.com";
-  const email = `${user}@${domain}`;
-  
-  const link = document.createElement("a");
-  link.href = `mailto:${email}`;
-  link.textContent = email;
+    // Email veilig opbouwen
+    const user = "info";
+    const domain = "scrivago.com";
+    const email = `${user}@${domain}`;
 
-  document.getElementById("email").appendChild(link);
+    const emailLink = document.createElement("a");
+    emailLink.href = `mailto:${email}`;
+    emailLink.textContent = email;
+    document.getElementById("email").appendChild(emailLink);
+    document.getElementById("email-link").href = `mailto:${email}`;
 
-  document.getElementById("address").textContent = "Adres: Middenlaan 64, 3971 Heppen, België";
+    // Adres veilig opbouwen
+    const street = "Jouw Straatnaam 1";
+    const city = "1000 Brussel";
+    const country = "België";
+    document.getElementById("address").textContent = `${street}, ${city}, ${country}`;
 </script>
-
+</body>
 </html>

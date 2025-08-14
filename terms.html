@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algemene Voorwaarden - Scrivago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Scrivago</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="terms.html">Algemene Voorwaarden</a>
+        <a id="email-link" href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Algemene Voorwaarden</h2>
+    <p>Door gebruik te maken van Scrivago ga je akkoord met de volgende voorwaarden:</p>
+    <ul>
+        <li>Credits zijn niet restitueerbaar, tenzij wettelijk verplicht.</li>
+        <li>Wij garanderen geen uitgeverijcontracten of commerciële resultaten.</li>
+        <li>De gebruiker blijft verantwoordelijk voor de inhoud die via onze AI wordt gegenereerd.</li>
+        <li>Wij kunnen de dienst wijzigen of beëindigen met redelijke kennisgeving.</li>
+    </ul>
+    <p id="email"></p>
+</main>
+
+<footer>
+    <p>&copy; 2025 Scrivago. Alle rechten voorbehouden.</p>
+</footer>
+
+<script>
+    const user = "info";
+    const domain = "scrivago.com";
+    const email = `${user}@${domain}`;
+    const emailLink = document.createElement("a");
+    emailLink.href = `mailto:${email}`;
+    emailLink.textContent = email;
+    document.getElementById("email").appendChild(emailLink);
+    document.getElementById("email-link").href = `mailto:${email}`;
+</script>
+</body>
+</html>
